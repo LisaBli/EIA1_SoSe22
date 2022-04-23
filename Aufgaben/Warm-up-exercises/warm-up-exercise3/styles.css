@@ -1,0 +1,23 @@
+body {
+color: white;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+color: white;
+}
+
+
+header {
+background: #1f799c;
+}
+
+main {
+background: #3b4d72;
+text-align: center;
+padding: 100px 40px 100px 40px;
+}
+
+footer {
+background: #341764;
+}
