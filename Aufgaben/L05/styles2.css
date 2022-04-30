@@ -1,0 +1,259 @@
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+h3{
+    font-family: Arial, Helvetica, sans-serif;
+}
+a{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo{
+    position: absolute;
+    top: 40px;
+    left: 330px;
+    width: 100px;
+    height: 50px;
+}
+
+a:hover, a:focus, a:active {
+    color: #999;
+    text-decoration: none;
+}
+
+.link {
+    position: relative;
+    display: block;
+    padding: 16px 0;
+    margin: 0 12px;
+    letter-spacing: 1px;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 900;
+    text-transform: uppercase;
+    transition: color 0.1s,background-color 0.1s,padding 0.2s ease-in;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    transition: color 0.1s, background-color 0.1s;
+}
+
+.link::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    transform-origin: right top;
+    transform: scale(0, 1);
+    transition: color 0.1s,transform 0.2s ease-out;
+}
+
+.link:active::before {
+    background-color: #000;
+}
+
+.current {
+    color: grey;
+}
+
+.current::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    transform-origin: right top;
+    transform: scale(1, 1);
+    transition: color 0.1s,transform 0.2s ease-out;
+
+}
+
+.link:hover::before, .link:focus::before {
+    transform-origin: left top;
+    transform: scale(1, 1);
+}
+
+
+header {
+    background-image: url(./IMG-4917.jpg);
+    width: 100%;
+    height: 440px;
+    background-repeat: no-repeat;
+    background-size:cover;
+    animation: slide 20s infinite;
+}
+
+body {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    position: absolute;
+    top:10px;
+    left: 770px;
+}
+
+li {
+    display: inline-block;
+    padding: 20px 0 20px;
+    vertical-align: middle;
+}
+
+.container {
+    border: none;
+    display: block;
+    justify-content: center;
+    width: 800px;
+    height: 950px;
+    margin: auto;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 0;
+    bottom: 0;
+}
+
+.container2 {
+    border: none;
+    display: block;
+    justify-content: center;
+    width: 800px;
+    height: 200px;
+    margin: auto;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 0;
+    bottom: 0;
+
+}
+
+footer {
+    background-color: #eaeaea;
+}
+
+.left {
+ font-size: small;
+}
+
+.insta {
+    opacity: 0.4;
+    position: absolute;
+    top: 60px;
+    left: 300px;
+    width: 80px;
+    height: 40px;
+}
+
+.insta:hover{
+    opacity: 2;
+    color: black;
+}
+
+.yt {
+    opacity: 0.4;
+    position: absolute;
+    top: 60px;
+    left: 340px;
+    width: 80px;
+    height: 40px;
+}
+
+.yt:hover {
+    opacity: 2;
+    color: black;
+}
+
+.linkedin {
+    opacity: 0.4;
+    position: absolute;
+    top: 60px;
+    left: 380px;
+    width: 80px;
+    height: 40px;
+}
+
+.linkedin:hover {
+    opacity: 2;
+    color: black;
+}
+
+.name {
+    color: darkgray;
+}
+
+.follow {
+    color: darkgrey;
+    font-size: small;
+    position: absolute;
+    top: 20px;
+    left: 320px;
+}
+
+.copyright {
+    font-size: small;
+    color: darkgrey;
+    position: absolute;
+    top: 20px;
+    left: 550px;
+}
+
+.container img:hover{
+transform: scale(1.2);
+}
+
+.banner {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 400px;
+    opacity: 0.4;
+    
+}
+
+.font {
+    font-family: 'Mulish', sans-serif;
+    position: relative;
+    font-size: larger;
+}
+
+
+@keyframes slide {
+    25%{
+        background-image: url(./IMG-4917.jpg);
+    }
+    50%{
+        background-image: url(./my.images/IMG_5103.jpg);
+    }
+    75%{
+        background-image: url(./my.images/IMG_5104.jpg);
+    }
+    100%{
+        background-image: url(./my.images/IMG_5091.jpg);
+    }
+}
+
+.acryl {
+    position: relative;
+    top: 25px;
+}
+
+.modelle {
+    position: relative;
+    top: 25px;
+}
+
+.skizzen {
+    position: relative;
+    top: 24px;
+}
+
+.grey:hover img:not(:hover) {
+opacity: 0.5;
+}
