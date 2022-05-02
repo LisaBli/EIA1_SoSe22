@@ -90,6 +90,7 @@ header {
     height: 440px;
     background-repeat: no-repeat;
     background-size:cover;
+    animation: slide 20s infinite;
 }
 
 body {
@@ -207,4 +208,19 @@ footer {
     position: absolute;
     top: 20px;
     left: 550px;
+}
+
+@keyframes slide {
+    25%{
+        background-image: url(./IMG-4917.jpg);
+    }
+    50%{
+        background-image: url(./my.images/IMG_5103.jpg);
+    }
+    75%{
+        background-image: url(./my.images/IMG_5104.jpg);
+    }
+    100%{
+        background-image: url(./my.images/IMG_5091.jpg);
+    }
 }
