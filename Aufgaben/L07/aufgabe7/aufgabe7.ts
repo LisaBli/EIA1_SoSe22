@@ -105,6 +105,7 @@ function clickeu(){
     document.querySelector(".number3").innerHTML=String((((eueinwohner-eufrüher)/eufrüher)*hundert).toFixed(2)+prozent);
     document.querySelector(".number4").innerHTML=String(((eueinwohner-eufrüher)).toFixed(2)+mio);
     document.querySelector(".einwohnerges").innerHTML="Gesamtzahl Einwohner*Innen in der EU";
+    document.querySelector(".titel").innerHTML="Einwohnerzahl in der EU";
 }
 
 var eufrüher: number= 497.7;
