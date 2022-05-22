@@ -8,7 +8,7 @@ window.addEventListener('load', function () {
     document.querySelector(".button7").addEventListener('click', playsample);
     document.querySelector(".button8").addEventListener('click', playsample);
     document.querySelector(".button9").addEventListener('click', playsample);
-    document.querySelector(".playit").addEventListener('click', playbutton);
+    document.querySelector(".playit").addEventListener('click', playinterval);
 });
 var sound = [new Audio('./assets/A.mp3'),
     new Audio('./assets/C.mp3'),
@@ -20,17 +20,24 @@ var sound = [new Audio('./assets/A.mp3'),
     new Audio('./assets/laugh-2.mp3'),
     new Audio('./assets/snare.mp3'),
 ];
+var playlist = [new Audio('./assets/hihat.mp3'),
+    new Audio('./assets/kick.mp3'), new Audio('./assets/snare.mp3'),
+];
 function playsample() {
     Index = document.querySelector("button:hover").getAttribute("id");
     sound[Index].play();
 }
 var Index;
-function playbutton() {
-    setInterval(playall, 1000);
-}
+var counter = 0;
 function playall() {
-    sound[5].play();
-    sound[8].play();
-    sound[4].play();
+    playlist[counter].play();
+    counter++;
+    console.log(counter);
+    if (counter == playlist.length) {
+        clearInterval(Index);
+    }
+}
+function playinterval() {
+    Index = setInterval(playall, 500);
 }
 //# sourceMappingURL=aufgabe8.js.map
