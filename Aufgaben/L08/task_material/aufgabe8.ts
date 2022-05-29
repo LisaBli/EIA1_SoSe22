@@ -34,7 +34,7 @@ sound[Index].play();
 var Index;
 var counter: number=0;
 
-function playall (){
+function playall(){
    playlist[counter].play();
    counter++
    console.log(counter)
