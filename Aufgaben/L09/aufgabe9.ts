@@ -76,9 +76,10 @@ function stopit(){
   stopsign();
 }
 
-var remixnext: number=0;
 
 function remixit(){
+
+    var remixnext: number=0;
     if (document.getElementById("playit").classList.contains("fa-stop"))
     {stopit();}
     
