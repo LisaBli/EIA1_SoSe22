@@ -1,0 +1,54 @@
+
+.container1{
+    position: relative;
+    justify-content: center;
+    width: 300px;
+    height: 500px;
+    margin: 75px auto;
+    border-style: dotted;
+
+}
+
+.title{
+    color: darkgrey;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    position: relative;
+    left: 100px;
+}
+
+#input1{
+width: 245px;
+position: relative;
+left: 7px;
+background-color: lightblue;
+}
+
+#trash{
+    opacity: 0.5;
+    position: absolute;
+    right: 0;
+    
+}
+  
+  #trash:hover {
+    opacity: 1;
+  }
+
+  li:hover{
+      background-color: lightgrey;
+  }
+
+  .add{
+      background-color: lightblue;
+      position: relative;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  #check {
+  background-color: aqua;
+  }
+  

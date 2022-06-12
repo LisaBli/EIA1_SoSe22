@@ -1,13 +1,13 @@
 window.addEventListener('load', function () {
-    document.querySelector(".button1").addEventListener('click', playsample);
-    document.querySelector(".button2").addEventListener('click', playsample);
-    document.querySelector(".button3").addEventListener('click', playsample);
-    document.querySelector(".button4").addEventListener('click', playsample);
-    document.querySelector(".button5").addEventListener('click', playsample);
-    document.querySelector(".button6").addEventListener('click', playsample);
-    document.querySelector(".button7").addEventListener('click', playsample);
-    document.querySelector(".button8").addEventListener('click', playsample);
-    document.querySelector(".button9").addEventListener('click', playsample);
+    document.querySelector(".button1").addEventListener('click', playsample1);
+    document.querySelector(".button2").addEventListener('click', playsample1);
+    document.querySelector(".button3").addEventListener('click', playsample1);
+    document.querySelector(".button4").addEventListener('click', playsample1);
+    document.querySelector(".button5").addEventListener('click', playsample1);
+    document.querySelector(".button6").addEventListener('click', playsample1);
+    document.querySelector(".button7").addEventListener('click', playsample1);
+    document.querySelector(".button8").addEventListener('click', playsample1);
+    document.querySelector(".button9").addEventListener('click', playsample1);
     document.querySelector(".playit").addEventListener('click', playinterval);
 });
 var sound = [new Audio('./assets/A.mp3'),
@@ -23,13 +23,13 @@ var sound = [new Audio('./assets/A.mp3'),
 var playlist = [new Audio('./assets/hihat.mp3'),
     new Audio('./assets/kick.mp3'), new Audio('./assets/snare.mp3'),
 ];
-function playsample() {
+function playsample1() {
     Index = document.querySelector("button:hover").getAttribute("id");
     sound[Index].play();
 }
 var Index;
 var counter = 0;
-function playall() {
+function playeverything() {
     playlist[counter].play();
     counter++;
     console.log(counter);
@@ -38,6 +38,6 @@ function playall() {
     }
 }
 function playinterval() {
-    Index = setInterval(playall, 500);
+    Index = setInterval(playeverything, 500);
 }
 //# sourceMappingURL=aufgabe8.js.map
