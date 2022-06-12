@@ -17,6 +17,13 @@
     left: 100px;
 }
 
+h5 {
+    color: darkgrey;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    left: 120px;
+} 
+
 #input1{
 width: 245px;
 position: relative;
@@ -31,6 +38,17 @@ background-color: lightblue;
     
 }
   
+.fa-solid{
+    opacity: 0.5;
+    position: absolute;
+    right: 0;
+     
+}
+
+.fa-solid:hover {
+    opacity: 1;
+  }
+
   #trash:hover {
     opacity: 1;
   }
@@ -52,3 +70,6 @@ background-color: lightblue;
   background-color: aqua;
   }
   
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
