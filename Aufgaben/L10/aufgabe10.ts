@@ -21,21 +21,28 @@ function add(): void {
     li.appendChild(trash);
     
 
-    //checked appears???
-    var kasten = '<input type="checkbox" id="checked">'
+    //checked appears
+    var kasten = document.querySelectorAll('ul input');
     var checked = document.createElement(kasten);
-    checked.innerHTML = kasten;
+    //checked.innerHTML = kasten;
     li.appendChild(checked);
 
     //counts
-    document.querySelector(".total").innerHTML = "in total" + li.ariaRowCount;
+    document.querySelector(".total").innerHTML = element.getElementsByTagName("li").length.toString();
+   
+    
 }
 
+var element = document.querySelector <HTMLUListElement> ("#list");
 var li = document.createElement("li");
+
 
 //delete list row
 function clear(): void {
-    document.querySelector("#list").removeChild(li);
+   this.removechild(li);
+
+   document.querySelector(".total").innerHTML = 
+   element.getElementsByTagName("li").length.toString();
 }
 
 

@@ -14,18 +14,21 @@ function add() {
     trash.classList.add("fa-solid");
     trash.classList.add("fa-trash-can");
     li.appendChild(trash);
-    //checked appears???
-    var kasten = '<input type="checkbox" id="checked">';
+    //checked appears
+    var kasten = document.querySelectorAll('ul input');
     var checked = document.createElement(kasten);
-    checked.innerHTML = kasten;
+    //checked.innerHTML = kasten;
     li.appendChild(checked);
     //counts
-    document.querySelector(".total").innerHTML = "in total" + li.ariaRowCount;
+    document.querySelector(".total").innerHTML = element.getElementsByTagName("li").length.toString();
 }
+var element = document.querySelector("#list");
 var li = document.createElement("li");
 //delete list row
 function clear() {
-    document.querySelector("#list").removeChild(li);
+    this.removechild(li);
+    document.querySelector(".total").innerHTML =
+        element.getElementsByTagName("li").length.toString();
 }
 // innerhtml += <>
 //# sourceMappingURL=aufgabe10.js.map
