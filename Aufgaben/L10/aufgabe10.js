@@ -1,6 +1,5 @@
 window.addEventListener('load', function () {
     document.querySelector(".add").addEventListener('click', add);
-    document.querySelector("#trash").addEventListener('click', clear);
 });
 function add() {
     //neues Listenelement erstellen
@@ -13,22 +12,23 @@ function add() {
     var trash = document.createElement("i");
     trash.classList.add("fa-solid");
     trash.classList.add("fa-trash-can");
+    trash.setAttribute("id", "trash");
     li.appendChild(trash);
     //checked appears
-    var kasten = document.querySelectorAll('ul input');
-    var checked = document.createElement(kasten);
-    //checked.innerHTML = kasten;
+    var checked = document.createElement("input");
+    checked.setAttribute('type', 'checkbox');
+    checked.setAttribute('id', 'check');
     li.appendChild(checked);
+    li.querySelector("#trash").addEventListener('click', clear);
     //counts
-    document.querySelector(".total").innerHTML = element.getElementsByTagName("li").length.toString();
+    document.querySelector(".total").innerHTML = "in total " + array.length;
+    var array = ['1', '2', '3', 'count'];
+    var count = "li.length";
 }
-var element = document.querySelector("#list");
 var li = document.createElement("li");
 //delete list row
 function clear() {
-    this.removechild(li);
-    document.querySelector(".total").innerHTML =
-        element.getElementsByTagName("li").length.toString();
+    this.parentElement.remove();
 }
 // innerhtml += <>
 //# sourceMappingURL=aufgabe10.js.map
