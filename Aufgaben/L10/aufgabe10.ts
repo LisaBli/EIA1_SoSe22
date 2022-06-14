@@ -31,9 +31,8 @@ function add(): void {
     li.querySelector("#trash").addEventListener('click', clear);
     
     //counts
-    document.querySelector(".total").innerHTML = "in total " + array.length;
-    var array: string[] = ['1', '2', '3', 'count'];
-    var count = "li.length";
+    var total = document.getElementById("total");
+    total.innerHTML = "in total " + (parseInt(total.innerHTML.slice(-1)) + 1);
     
 }
 
@@ -43,7 +42,8 @@ var li = document.createElement("li");
 //delete list row
 function clear(): void {
    this.parentElement.remove();
-
+   var total = document.getElementById("total");
+   total.innerHTML = "in total " + (parseInt(total.innerHTML.slice(-1)) - 1);
 }
 
 
