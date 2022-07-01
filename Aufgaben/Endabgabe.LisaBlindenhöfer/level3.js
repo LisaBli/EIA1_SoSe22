@@ -19,15 +19,16 @@ var sentence = [
 // globale Variable: sucht random Satz/ Wörter aus Satz aus Objekt heraus
 var random1;
 //beim Laden der Seite soll Fkt. aufgerufen werden
-window.onload = sentences4;
+window.onload = sentences3;
 //Funktion, die Sätze mit den einzelnen Wörtern random ausgibt
-function sentences4() {
+function sentences3() {
     //random1 Variable, die random Sätze und Wörter berechnet
     random1 = Math.floor(Math.random() * sentence.length);
     //test über console
     console.log(random1);
     //überschreibt html mit random generierten Sätzen
     document.querySelector("#german").innerHTML = sentence[random1].german;
+    //console.log(sentence[random1].german);
     //for-Schleife , die den Wörtern eine Klasse zuordnet und div erstellt --> Wörter in random Reihenfolge ausgibt
     for (let index = 0; index < sentence[random1].single.length; index++) {
         //Variable erstellt neues div element
@@ -55,7 +56,7 @@ var levelcount = 0;
 function zaehler3() {
     clickindex++;
     if (clickindex == 1) {
-        var value1 = document.querySelector(".divsinglewords:hover").textContent;
+        var value1 = document.querySelector(".divsinglewords:hover").innerHTML;
         var array1 = sentence[random1].single[0];
         //Wenn der Wert des gehoverten Wortes mit dem des arrays an 1. Stelle übereinstimmt,
         //soll das Wort innerhtml an der stlle #right ausgegeben werden und ein Punkt wird addiert
@@ -71,7 +72,7 @@ function zaehler3() {
         }
     }
     if (clickindex == 2) {
-        var value2 = document.querySelector(".divsinglewords:hover").textContent;
+        var value2 = document.querySelector(".divsinglewords:hover").innerHTML;
         var array2 = sentence[random1].single[1];
         if (value2 == array2) {
             points3();
@@ -84,7 +85,7 @@ function zaehler3() {
         }
     }
     if (clickindex == 3) {
-        var value3 = document.querySelector(".divsinglewords:hover").textContent;
+        var value3 = document.querySelector(".divsinglewords:hover").innerHTML;
         var array3 = sentence[random1].single[2];
         if (value3 == array3) {
             points3();
@@ -100,15 +101,15 @@ function zaehler3() {
                 }, 700);
                 clickindex = 0;
                 document.querySelector("#random").innerHTML = "";
-                sentences22();
-                //zaehler3();
-                //document.querySelector("#random").addEventListener('click', zaehler3);
+                sentences23();
+                //zaehler();
+                //document.querySelector("#random").addEventListener('click', zaehler);
                 //sobald Levelcount bei >= 15: werden alle texte inner html ersetzt und überschrieben
                 if (levelcount >= 15) {
                     document.querySelector("#german").innerHTML = "";
                     document.querySelector("#german").innerHTML = "Dein finaler Punktestand: " + counter;
                     document.querySelector("#right").innerHTML = "";
-                    document.querySelector("#right").innerHTML = "Du hast das Level erfolgreich abgeschlossen!";
+                    document.querySelector("#right").innerHTML = "Glückwunsch!";
                     document.querySelector("#random").innerHTML = "";
                     document.querySelector("#random").innerHTML = "Gehe zurück zur Startseite, um das nächste Level zu spielen";
                 }
@@ -122,7 +123,7 @@ function zaehler3() {
     }
     if (sentence[random1].single[3]) {
         if (clickindex == 4) {
-            var value4 = document.querySelector(".divsinglewords:hover").textContent;
+            var value4 = document.querySelector(".divsinglewords:hover").innerHTML;
             var array4 = sentence[random1].single[3];
             if (value4 == array4) {
                 points3();
@@ -135,15 +136,15 @@ function zaehler3() {
                     }, 700);
                     clickindex = 0;
                     document.querySelector("#random").innerHTML = "";
-                    sentences22();
-                    //zaehler3();
-                    //document.querySelector("#random").addEventListener('click', zaehler3);
+                    sentences23();
+                    //zaehler();
+                    //document.querySelector("#random").addEventListener('click', zaehler);
                     //sobald Levelcount bei >= 15: werden alle texte inner html ersetzt und überschrieben
                     if (levelcount >= 15) {
                         document.querySelector("#german").innerHTML = "";
                         document.querySelector("#german").innerHTML = "Dein finaler Punktestand: " + counter;
                         document.querySelector("#right").innerHTML = "";
-                        document.querySelector("#right").innerHTML = "Du hast das Level erfolgreich abgeschlossen!";
+                        document.querySelector("#right").innerHTML = "Glückwunsch!";
                         document.querySelector("#random").innerHTML = "";
                         document.querySelector("#random").innerHTML = "Gehe zurück zur Startseite, um das nächste Level zu spielen";
                     }
@@ -158,7 +159,7 @@ function zaehler3() {
     }
     if (sentence[random1].single[4]) {
         if (clickindex == 5) {
-            var value5 = document.querySelector(".divsinglewords:hover").textContent;
+            var value5 = document.querySelector(".divsinglewords:hover").innerHTML;
             var array5 = sentence[random1].single[4];
             if (value5 == array5) {
                 points3();
@@ -171,15 +172,15 @@ function zaehler3() {
                     }, 700);
                     clickindex = 0;
                     document.querySelector("#random").innerHTML = "";
-                    sentences22();
-                    //zaehler3();
-                    //document.querySelector("#random").addEventListener('click', zaehler3);
+                    sentences23();
+                    //zaehler();
+                    //document.querySelector("#random").addEventListener('click', zaehler);
                     //sobald Levelcount bei >= 15: werden alle texte inner html ersetzt und überschrieben
                     if (levelcount >= 15) {
                         document.querySelector("#german").innerHTML = "";
                         document.querySelector("#german").innerHTML = "Dein finaler Punktestand: " + counter;
                         document.querySelector("#right").innerHTML = "";
-                        document.querySelector("#right").innerHTML = "Du hast das Level erfolgreich abgeschlossen!";
+                        document.querySelector("#right").innerHTML = "Glückwunsch!";
                         document.querySelector("#random").innerHTML = "";
                         document.querySelector("#random").innerHTML = "Gehe zurück zur Startseite, um das nächste Level zu spielen";
                     }
@@ -194,7 +195,7 @@ function zaehler3() {
     }
     if (sentence[random1].single[5]) {
         if (clickindex == 6) {
-            var value6 = document.querySelector(".divsinglewords:hover").textContent;
+            var value6 = document.querySelector(".divsinglewords:hover").innerHTML;
             var array6 = sentence[random1].single[5];
             if (value6 == array6) {
                 points3();
@@ -207,15 +208,15 @@ function zaehler3() {
                     }, 700);
                     clickindex = 0;
                     document.querySelector("#random").innerHTML = "";
-                    sentences22();
-                    //zaehler3();
-                    //document.querySelector("#random").addEventListener('click', zaehler3);
+                    sentences23();
+                    //zaehler();
+                    //document.querySelector("#random").addEventListener('click', zaehler);
                     //sobald Levelcount bei >= 15: werden alle texte inner html ersetzt und überschrieben
                     if (levelcount >= 15) {
                         document.querySelector("#german").innerHTML = "";
                         document.querySelector("#german").innerHTML = "Dein finaler Punktestand: " + counter;
                         document.querySelector("#right").innerHTML = "";
-                        document.querySelector("#right").innerHTML = "Du hast das Level erfolgreich abgeschlossen!";
+                        document.querySelector("#right").innerHTML = "Glückwunsch!";
                         document.querySelector("#random").innerHTML = "";
                         document.querySelector("#random").innerHTML = "Gehe zurück zur Startseite, um das nächste Level zu spielen";
                     }
@@ -230,7 +231,7 @@ function zaehler3() {
     }
     if (sentence[random1].single[6]) {
         if (clickindex == 7) {
-            var value7 = document.querySelector(".divsinglewords:hover").textContent;
+            var value7 = document.querySelector(".divsinglewords:hover").innerHTML;
             var array7 = sentence[random1].single[6];
             if (value7 == array7) {
                 points3();
@@ -240,11 +241,11 @@ function zaehler3() {
                 if (7 == sentence[random1].single.length) {
                     levelcount++;
                     setTimeout(function () {
-                        clearright();
-                    }, 700);
+                        clearright3();
+                    }, 500);
                     clickindex = 0;
                     document.querySelector("#random").innerHTML = "";
-                    sentences22();
+                    sentences23();
                     //zaehler();
                     //document.querySelector("#random").addEventListener('click', zaehler);
                     //sobald Levelcount bei >= 15: werden alle texte inner html ersetzt und überschrieben
@@ -252,7 +253,7 @@ function zaehler3() {
                         document.querySelector("#german").innerHTML = "";
                         document.querySelector("#german").innerHTML = "Dein finaler Punktestand: " + counter;
                         document.querySelector("#right").innerHTML = "";
-                        document.querySelector("#right").innerHTML = "Du hast das Level erfolgreich abgeschlossen!";
+                        document.querySelector("#right").innerHTML = "Glückwunsch!";
                         document.querySelector("#random").innerHTML = "";
                         document.querySelector("#random").innerHTML = "Gehe zurück zur Startseite, um das nächste Level zu spielen";
                     }
@@ -287,10 +288,8 @@ function clearright3() {
     document.querySelector("#right").innerHTML = "";
 }
 //zweite sentence Fkt., genau gleich um Wörter neu zu laden nach abschließen der Aufgabe
-function sentences22() {
-    //random1 Variable, die random Sätze und Wörter berechnet
+function sentences23() {
     random1 = Math.floor(Math.random() * sentence.length);
-    random1++;
     console.log(random1);
     document.querySelector("#german").innerHTML = sentence[random1].german;
     for (let index = 0; index < sentence[random1].single.length; index++) {

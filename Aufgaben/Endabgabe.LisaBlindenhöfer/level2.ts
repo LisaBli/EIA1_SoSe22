@@ -29,10 +29,10 @@ var sentence: Satz[] = [
 var random1: number;
 
 //beim Laden der Seite soll Fkt. aufgerufen werden
-window.onload = sentences3;
+window.onload = sentences2;
 
 //Funktion, die Sätze mit den einzelnen Wörtern random ausgibt
-function sentences3(): void {
+function sentences2(): void {
 
     //random1 Variable, die random Sätze und Wörter berechnet
     random1 =  Math.floor(Math.random() * sentence.length);
@@ -42,6 +42,7 @@ function sentences3(): void {
 
     //überschreibt html mit random generierten Sätzen
     document.querySelector("#german").innerHTML = sentence[random1].german;
+    //console.log(sentence[random1].german);
 
     //for-Schleife , die den Wörtern eine Klasse zuordnet und div erstellt --> Wörter in random Reihenfolge ausgibt
     for (let index: number = 0; index < sentence[random1].single.length; index++) {
@@ -62,6 +63,8 @@ function sentences3(): void {
             getelement.appendChild(getelement.children[Math.random() * index | 0]);
         }
     }
+
+    
 }
 
 //ruft Funktion "zahler" auf bei click auf Wortbausteine
@@ -78,7 +81,7 @@ var levelcount: number = 0;
 function zaehler2(): void {
     clickindex++;
     if (clickindex == 1) {
-        var value1: string = document.querySelector(".divsinglewords:hover").textContent;
+        var value1: string = document.querySelector(".divsinglewords:hover").innerHTML;
         var array1: string = sentence[random1].single[0];
 
         //Wenn der Wert des gehoverten Wortes mit dem des arrays an 1. Stelle übereinstimmt,
@@ -96,7 +99,7 @@ function zaehler2(): void {
 
     }
     if (clickindex == 2) {
-        var value2: string = document.querySelector(".divsinglewords:hover").textContent;
+        var value2: string = document.querySelector(".divsinglewords:hover").innerHTML;
         var array2: string = sentence[random1].single[1];
 
         if (value2 == array2) {
@@ -112,7 +115,7 @@ function zaehler2(): void {
     }
 
     if (clickindex == 3) {
-        var value3: string = document.querySelector(".divsinglewords:hover").textContent;
+        var value3: string = document.querySelector(".divsinglewords:hover").innerHTML;
         var array3: string = sentence[random1].single[2];
 
         if (value3 == array3) {
@@ -131,8 +134,8 @@ function zaehler2(): void {
                 clickindex = 0;
                 document.querySelector("#random").innerHTML = "";
                 sentences21();
-                //zaehler2();
-                //document.querySelector("#random").addEventListener('click', zaehler2);
+                //zaehler();
+                //document.querySelector("#random").addEventListener('click', zaehler);
 
                 //sobald Levelcount bei >= 10: werden alle texte inner html ersetzt und überschrieben
                 if (levelcount >= 10) {
@@ -156,7 +159,7 @@ function zaehler2(): void {
 
     if (sentence[random1].single[3]) {
         if (clickindex == 4) {
-            var value4: string = document.querySelector(".divsinglewords:hover").textContent;
+            var value4: string = document.querySelector(".divsinglewords:hover").innerHTML;
             var array4: string = sentence[random1].single[3];
 
             if (value4 == array4) {
@@ -172,8 +175,8 @@ function zaehler2(): void {
                     clickindex = 0;
                     document.querySelector("#random").innerHTML = "";
                     sentences21();
-                    //zaehler2();
-                    //document.querySelector("#random").addEventListener('click', zaehler2);
+                    //zaehler();
+                    //document.querySelector("#random").addEventListener('click', zaehler);
                     //sobald Levelcount bei >= 10: werden alle texte inner html ersetzt und überschrieben
                     if (levelcount >= 10) {
 
@@ -197,7 +200,7 @@ function zaehler2(): void {
 
     if (sentence[random1].single[4]) {
         if (clickindex == 5) {
-            var value5: string = document.querySelector(".divsinglewords:hover").textContent;
+            var value5: string = document.querySelector(".divsinglewords:hover").innerHTML;
             var array5: string = sentence[random1].single[4];
 
             if (value5 == array5) {
@@ -213,8 +216,8 @@ function zaehler2(): void {
                     clickindex = 0;
                     document.querySelector("#random").innerHTML = "";
                     sentences21();
-                    //zaehler2();
-                    //document.querySelector("#random").addEventListener('click', zaehler2);
+                    //zaehler();
+                    //document.querySelector("#random").addEventListener('click', zaehler);
                     //sobald Levelcount bei >= 10: werden alle texte inner html ersetzt und überschrieben
                     if (levelcount >= 10) {
 
@@ -238,7 +241,7 @@ function zaehler2(): void {
 
     if (sentence[random1].single[5]) {
         if (clickindex == 6) {
-            var value6: string = document.querySelector(".divsinglewords:hover").textContent;
+            var value6: string = document.querySelector(".divsinglewords:hover").innerHTML;
             var array6: string = sentence[random1].single[5];
 
             if (value6 == array6) {
@@ -254,8 +257,8 @@ function zaehler2(): void {
                     clickindex = 0;
                     document.querySelector("#random").innerHTML = "";
                     sentences21();
-                    //zaehler2();
-                    //document.querySelector("#random").addEventListener('click', zaehler2);
+                    //zaehler();
+                    //document.querySelector("#random").addEventListener('click', zaehler);
                     //sobald Levelcount bei >= 10: werden alle texte inner html ersetzt und überschrieben
                     if (levelcount >= 10) {
 
@@ -279,7 +282,7 @@ function zaehler2(): void {
 
     if (sentence[random1].single[6]) {
         if (clickindex == 7) {
-            var value7: string = document.querySelector(".divsinglewords:hover").textContent;
+            var value7: string = document.querySelector(".divsinglewords:hover").innerHTML;
             var array7: string = sentence[random1].single[6];
 
             if (value7 == array7) {
@@ -292,7 +295,7 @@ function zaehler2(): void {
                     levelcount++;
                     setTimeout(function (): void {
                         clearright2();
-                    }, 700);
+                    }, 500);
                     clickindex = 0;
                     document.querySelector("#random").innerHTML = "";
                     sentences21();
@@ -351,10 +354,8 @@ function clearright2(): void {
 //zweite sentence Fkt., genau gleich um Wörter neu zu laden nach abschließen der Aufgabe
 function sentences21(): void {
 
-    //random1 Variable, die random Sätze und Wörter berechnet
     random1 =  Math.floor(Math.random() * sentence.length);
-
-    random1++;
+    
     console.log(random1);
     document.querySelector("#german").innerHTML = sentence[random1].german;
 

@@ -28,6 +28,7 @@ function sentences() {
     console.log(random1);
     //überschreibt html mit random generierten Sätzen
     document.querySelector("#german").innerHTML = sentence[random1].german;
+    //console.log(sentence[random1].german);
     //for-Schleife , die den Wörtern eine Klasse zuordnet und div erstellt --> Wörter in random Reihenfolge ausgibt
     for (let index = 0; index < sentence[random1].single.length; index++) {
         //Variable erstellt neues div element
@@ -101,6 +102,7 @@ function zaehler() {
                 clickindex = 0;
                 document.querySelector("#random").innerHTML = "";
                 sentences2();
+                //an dieser Stelle eigentlich: sentences2[random1].splice(random1);
                 //zaehler();
                 //document.querySelector("#random").addEventListener('click', zaehler);
                 //sobald Levelcount bei >= 5: werden alle texte inner html ersetzt und überschrieben
