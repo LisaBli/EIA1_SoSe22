@@ -1,0 +1,136 @@
+.container{
+    position: relative;
+    justify-content: center;
+    width: 300px;
+    height: 500px;
+    margin: 75px auto;
+    border-style: initial;
+    background-color: #ffffe0;
+}
+
+#smartphone{
+    height: 667px;
+    width: 375px;
+    position: relative;
+    border-style: outset;
+    justify-content: center;
+    margin: 75px auto;
+    background-color: #ffffe0;
+}
+
+.leicht{
+    height: 50px;
+    width: 300px;
+    background-color: #e7feff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.mittel{
+    height: 50px;
+    width: 300px;
+    background-color: #ffe584;
+}
+
+.schwer{
+    height: 50px;
+    width: 300px;
+    background-color: #fbb917;
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    margin: 26px;
+}
+
+.text1{
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    margin: 28px;
+    color: #fbb917;
+}
+
+.footer{
+    width: 375px;
+    height: 80px;
+    position: absolute;
+    border-style: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fac375;
+    bottom: 0px;
+    
+}
+
+
+.p1{
+    position: absolute;
+    color: white;
+    left: 45px;
+}
+
+body {
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.home {
+    position: relative;
+    height: 30px;
+    left: 160px;
+
+}
+
+.divsinglewords{
+    width: 200px;
+    height: 30px;
+    background-color: #fbb917;
+    border-style: outset;
+    position: relative;
+    justify-content: center;
+    margin: 10px;
+    text-align: center;
+    left: 36px;
+    top: 50px;
+    cursor: pointer;
+}
+
+.divsinglewords:hover{
+opacity: 0.8;
+}
+
+.bestanden{
+    top: 140px;
+    left: 26px;
+}
+
+.bestanden2{
+    top: 40px;
+    left: 60px;
+}
+
+#points{
+    background-color: #fac375;
+
+}
+
+#german{
+    background-color: #fac375;
+    width: fit-content;
+    height: 30px;
+}
+
+#right {
+    background-color: #fbb917;
+    width: fit-content;
+    height: 40px;
+}
+
+.punktestand {
+    background-color: #fbb917;
+    top: 160px;
+    position: inherit;
+    height: 30px;
+
+}
+
