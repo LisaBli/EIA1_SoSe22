@@ -1,11 +1,15 @@
+/*
+Aufgabe: 01
+Name: Lisa Blindenhöfer
+Matrikel Nr.: 271450
+Datum: 13.10.2022
+*/
+
+namespace Zufallsgedicht{
 
 let subjekte: string[] = ["Die Katze", "Der Hund", "Jeder", "Anna", "Hans-Peter", "Der Prof"];
 let praedikate: string[] = ["schlägt", "sammelt", "bewundert", "hasst", "liebt", "pflegt"];
 let objekte: string[] = ["Löwen", "Pilze", "Oliven", "Pferde", "Bäume", "Nilpferde"];
-
-console.log(subjekte);
-console.log(praedikate);
-console.log(objekte);
 
 //gibt Zufallsgedicht aus
 for (let _index: number = subjekte.length; _index > 0; _index--) {
@@ -25,5 +29,6 @@ function getVerse(_subjekte: string[], _praedikate: string[], _objekte: string[]
 
     let zeile: string = s + " " + p + " " + o + ".";
     console.log(zeile)
+
     return;
-}
+}}
