@@ -1,0 +1,53 @@
+#div0 {
+    width: 45%;
+    height: 600px;
+    background-color: #2176bb;
+    position: relative;
+    left: 2%;
+    top: 30px;
+    float: left;
+    border-style:double;
+    border-color: #11116e;
+}
+
+#div1 {
+    width: 45%;
+    height: 600px;
+    background-color: #2176bb;
+    position: relative;
+    right: 2%;
+    top: 30px;
+    float: right;
+    border-style:double;
+    border-color: #11116e;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #11116e;
+    background-color: grey;
+    margin-left: 2%;
+    width: 96%;
+}
+
+#span {
+    position: fixed;
+    background-color: grey;
+    height: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    border-style: groove;
+    padding-top: 12px;
+}
+
+body {
+    background-color: lightgrey;
+}
+
+#button {
+    background-color: grey;
+    position: fixed;
+    top: 130px;
+    left: 50px;
+    width: 150px;
+}
