@@ -1,0 +1,90 @@
+
+.container1{
+    position: relative;
+    justify-content: center;
+    width: 414px;
+    height: 667px;
+    margin: 75px auto;
+    border-style: groove;
+    background-color: rgba(105, 155, 230, 0.178);
+
+}
+
+.title{
+    color: darkgrey;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: xx-large;
+    position: relative;
+    left: 100px;
+}
+
+h5 {
+    color: darkgrey;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    left: 150px;
+} 
+
+#input1{
+width: 320px;
+height: 20px;
+position: relative;
+left: 7px;
+background-color: lightgrey;
+}
+
+#trash{
+    opacity: 0.5;
+    position: absolute;
+    right: 0;
+    
+}
+  
+.fa-solid{
+    opacity: 0.5;
+    position: absolute;
+    right: 0;
+     
+}
+
+.fa-solid:hover {
+    opacity: 1;
+  }
+
+  #trash:hover {
+    opacity: 1;
+  }
+
+  #check {
+   left: 0;
+   position: absolute;
+  }
+
+  li:hover{
+      background-color: lightgrey;
+  }
+
+  .add{
+      background-color: lightgrey;
+      width: 65px;
+      height: 30px;
+      position: relative;
+      left: 10px;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  #check {
+  background-color: lightgrey;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+ #amount {
+     position: relative;
+    top: 6px;
+}
