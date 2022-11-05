@@ -2,7 +2,7 @@
 Aufgabe: 04
 Name: Lisa Blindenhöfer
 Matrikel Nr.: 271450
-Datum: 03.11.2022
+Datum: 05.11.2022
 Quellen: Bastian Aberle, W3Schools
 */
 var a04_shoppinglist;
@@ -19,6 +19,7 @@ var a04_shoppinglist;
     let amount;
     let comment;
     let date;
+    let check;
     //lädt data aus data.ts
     function loaddata() {
         for (let i = 0; i < a04_shoppinglist.inputs.length; i++) {
@@ -27,9 +28,17 @@ var a04_shoppinglist;
             let amount = a04_shoppinglist.inputs[i].amount;
             let product = a04_shoppinglist.inputs[i].inputproduct;
             let comment = a04_shoppinglist.inputs[i].inputcomment;
+            let buynext = a04_shoppinglist.inputs[i].check.toString();
+            let buy;
+            if (buynext == "false") {
+                buy = " ";
+            }
+            else {
+                buy = " buy";
+            }
             let nextelement = document.createElement("div");
             nextelement.classList.add("inputData");
-            nextelement.innerHTML = date + " " + product + " " + amount + " " + comment;
+            nextelement.innerHTML = date + " / " + product + " / " + amount + " / " + comment + " / " + buy;
             var getelement = document.querySelector("#alloutputs");
             getelement.appendChild(nextelement);
             //Neue Checkbox 
@@ -68,17 +77,21 @@ var a04_shoppinglist;
         let amount = Number(data.get("Amount"));
         let comment = data.get("Comment"?.toString());
         let dateoftoday = new Date();
+        //buy next time erscheint
+        let element = document.getElementById("checkboxdate");
+        let nextpurchase;
+        if (element.checked) {
+            nextpurchase = " buy";
+        }
+        else {
+            nextpurchase = " ";
+        }
         //gibt die einzelnen inputs aus
         let nextelement = document.createElement("div");
         nextelement.classList.add("inputData");
-        nextelement.innerHTML = dateoftoday.toLocaleDateString() + " " + product + " " + amount + " " + comment;
+        nextelement.innerHTML = dateoftoday.toLocaleDateString() + " / " + product + " / " + amount + " / " + comment + " / " + nextpurchase;
         var getelement = document.querySelector("#alloutputs");
         getelement.appendChild(nextelement);
-        //buy next time erscheint
-        document.querySelector("#checkboxdate").addEventListener("click", buynext);
-        function buynext() {
-            console.log("test");
-        }
         //Neue Checkbox 
         let listcheck = document.createElement("input");
         listcheck.type = "checkbox";
