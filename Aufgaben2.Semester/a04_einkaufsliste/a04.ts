@@ -35,6 +35,7 @@ namespace a04_shoppinglist {
             let product: string = inputs[i].inputproduct;
             let comment: string = inputs[i].inputcomment;
 
+            //buy next
             let buynext: string = inputs[i].check.toString();
             let buy: string;
             if (buynext == "false") {
@@ -98,7 +99,7 @@ namespace a04_shoppinglist {
 
         let dateoftoday: Date = new Date();
 
-        //buy next time erscheint
+        //buy next time 
         let element: HTMLInputElement = <HTMLInputElement>document.getElementById("checkboxdate");
         let nextpurchase: string;
         if (element.checked) { 

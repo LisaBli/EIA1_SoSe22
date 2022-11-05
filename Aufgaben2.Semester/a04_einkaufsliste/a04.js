@@ -28,6 +28,7 @@ var a04_shoppinglist;
             let amount = a04_shoppinglist.inputs[i].amount;
             let product = a04_shoppinglist.inputs[i].inputproduct;
             let comment = a04_shoppinglist.inputs[i].inputcomment;
+            //buy next
             let buynext = a04_shoppinglist.inputs[i].check.toString();
             let buy;
             if (buynext == "false") {
@@ -77,7 +78,7 @@ var a04_shoppinglist;
         let amount = Number(data.get("Amount"));
         let comment = data.get("Comment"?.toString());
         let dateoftoday = new Date();
-        //buy next time erscheint
+        //buy next time 
         let element = document.getElementById("checkboxdate");
         let nextpurchase;
         if (element.checked) {
