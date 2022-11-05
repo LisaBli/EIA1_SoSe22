@@ -1,0 +1,159 @@
+
+.container1{
+    position: relative;
+    justify-content: center;
+    width: 414px;
+    height: 750px;
+    margin: 75px auto;
+    border-style: groove;
+    background-color: rgba(105, 155, 230, 0.178);
+
+}
+
+.title{
+    color: darkgrey;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: xx-large;
+    position: relative;
+    left: 100px;
+}
+
+#inputproduct{
+width: 320px;
+height: 20px;
+position: relative;
+background-color: lightgrey;
+left: 30px;
+top: 8px;
+border-style: ridge;
+}
+
+#trash{
+    opacity: 0.5;
+    position: relative;
+    left: 350px;
+    top: -17px;
+}
+
+#trash:hover {
+    opacity: 1;
+}
+
+#check {
+   left: 10;
+   position: absolute;
+}
+
+li:hover{
+    background-color: lightgrey;
+    width: 367px;
+}
+
+#add{
+   position: relative;
+   left: 14px;
+   top: 6px;
+}
+
+#button{
+    background-color: lightgrey;
+    width: 65px;
+    height: 30px;
+    position: relative;
+    left: 170px;
+    border-radius: 10%;
+    top: -10px;
+    opacity: 0.7;
+}
+
+#button:hover{
+    opacity: 1.0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+#check {
+  background-color: lightgrey;
+}
+  
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#amount {
+    position: relative;
+    left: 110px;
+    width: 150px;
+    height: 20px;
+    top: 4px;
+}
+
+#inputcomment {
+    position: relative;
+    left: 110px;
+    width: 150px;
+    height: 20px;
+    top: 0px;
+}
+
+#date {
+    position: relative;
+    left: 110px;
+    width: 150px;
+    height: 20px;
+    top: -4px;
+}
+
+fieldset {
+    border: none;
+}
+
+#allinputs {
+    border: none;
+}
+
+#edit {
+    color: black;
+    opacity: 0.5;
+    position: relative;
+    left: 380px;
+    top: -35px;
+}
+
+#edit:hover {
+    opacity: 1;
+}
+
+#alloutputs {
+    border-style: none;
+    width: 395px;
+    height: 410px;
+    position: relative;
+    left: 6px;
+}
+
+.checkbox {
+    position: relative;
+    left: 1px;
+}
+
+#buy{
+    color: grey;
+    font-size: smaller;
+    position: relative;
+    left: 128px;
+}
+
+#checkboxdate{
+    position: relative;
+    left: 130px;
+    width: 20px;
+    height: 20px;
+    top: 4.5px;
+}
+
+.checkbox1{
+    position: relative;
+}

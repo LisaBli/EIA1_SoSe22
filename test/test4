@@ -1,0 +1,124 @@
+// /*
+// Aufgabe: 04
+// Name: Lisa Blindenhöfer
+// Matrikel Nr.: 271450
+// Datum: 03.11.2022
+// Quellen: Bastian Aberle
+// */
+
+// namespace a04_shoppinglist {
+
+//     window.addEventListener("load", handleload);
+   
+//     window.addEventListener("load", loaddata);
+
+//     function handleload(): void {
+//         document.querySelector("#add").addEventListener("click", addList);
+//         document.querySelector("#listtext").addEventListener("click", editlistelement);
+//         document.querySelector("#trash").addEventListener("click", deletelistelement);
+//         document.querySelector("#check").addEventListener("click", checklistelement);
+//     }
+
+//     let inputproduct: string;
+//     let amount: number;
+//     let comment: string;
+//     let date: string;
+
+//     function loaddata(): void {
+
+//         for (let index: number = 0; index < inputs.length; index++) {
+
+//             //console.log("test");
+
+//             //holt Daten aus data.ts array 
+//             let dateDay: string = inputs[index].date;
+//             let amount: number = inputs[index].amount;
+//             let item: string = inputs[index].inputproduct;
+//             let comment: string = inputs[index].inputcomment;
+
+//             //generiert mit den Daten den Eintrag und fügt ihn der Liste hinzu
+//             let newelement: HTMLDivElement = document.createElement("div");
+//             newelement.classList.add("inputData");
+//             newelement.innerHTML = dateDay + " " + amount + " " + item + " " + comment;
+//             var getelement: HTMLElement = document.querySelector("#alloutputs");
+//             getelement.appendChild(newelement);
+
+//             //Neue Checkbox für den Eintrag wird generiert
+//             let newCheckbox: HTMLInputElement = document.createElement("input");
+//             newCheckbox.type = "checkbox";
+//             newCheckbox.name = "CheckboxList";
+//             newCheckbox.className = "checkbox";
+//             var elementNewCheckbox: HTMLElement = document.querySelector("#alloutputs");
+//             elementNewCheckbox.appendChild(newCheckbox);
+
+//             //neues edit Icon für den Eintrag wird generiert
+//             let newEdit: HTMLDivElement = document.createElement("div");
+//             newEdit.className = "edit";
+//             newEdit.innerHTML = "<i id ='edit' class='fa-solid fa-pen fa-lg'></i>";
+//             let newEditElement: Element = document.querySelector("#alloutputs");
+//             newEditElement.appendChild(newEdit);
+
+//             //neues Trash Icon für den Eintrag wird generiert 
+//             let newTrash: HTMLDivElement = document.createElement("div");
+//             newTrash.innerHTML = "<i id ='trash' class='fa-solid fa-trash fa-lg'></i>";
+//             let elementTrashElement: Element = document.querySelector("#alloutputs");
+//             elementTrashElement.appendChild(newTrash);
+
+//         }
+//     }
+
+//     function addList(): void {
+//         console.log("hinzufügen");
+//         let dateDay: Date = new Date();
+//         let formData: FormData = new FormData(document.forms[0]);
+//         // console.log(formData);
+//         let product: string = formData.get("Product")?.toString()!;
+//         let amount: number = Number(formData.get("Amount")!);
+//         let comment: FormDataEntryValue = formData.get("Comment"?.toString());
+
+//         //gibt die einzelnen inputs aus
+//         let newelement: HTMLDivElement = document.createElement("div");
+//         newelement.classList.add("inputData");
+//         newelement.innerHTML = dateDay.toLocaleDateString() + " " + amount + " " + product + " " + comment;
+//         var getelement: HTMLElement = document.querySelector("#alloutputs");
+//         getelement.appendChild(newelement);
+
+//         //gibt die neue Checkbox aus
+//         let newCheckbox: HTMLInputElement = document.createElement("input");
+//         newCheckbox.type = "checkbox";
+//         newCheckbox.name = "CheckboxList";
+//         newCheckbox.className = "checkbox";
+//         var elementNewCheckbox: HTMLElement = document.querySelector("#alloutputs");
+//         elementNewCheckbox.appendChild(newCheckbox);
+
+//         //gibt neues edit icon aus
+//         let newEdit: HTMLDivElement = document.createElement("div");
+//         newEdit.className = "edit";
+//         newEdit.innerHTML = "<i id ='edit' class='fa-solid fa-pen fa-lg'></i>";
+
+//         let newEditElement: Element = document.querySelector("#alloutputs");
+//         newEditElement.appendChild(newEdit);
+
+
+//         //gibt neuen Trash icon aus
+//         let newTrash: HTMLDivElement = document.createElement("div");
+//         newTrash.innerHTML = "<i id ='trash' class='fa-solid fa-trash fa-lg'></i>";
+//         let elementTrashElement: Element = document.querySelector("#alloutputs");
+//         elementTrashElement.appendChild(newTrash);
+
+//     }
+
+//     function editlistelement(): void {
+//         console.log("when list element is added: possibility to edit list element");
+//     }
+    
+//     function deletelistelement(): void {
+//         console.log("delete list element");
+//         //li.querySelector("#trash").addEventListener("click", clear);
+//     }
+    
+//     function checklistelement(): void {
+//         console.log("list element checked");
+//     }
+    
+// }
