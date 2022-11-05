@@ -68,16 +68,17 @@ var a04_shoppinglist;
         let amount = Number(data.get("Amount"));
         let comment = data.get("Comment"?.toString());
         let dateoftoday = new Date();
-        // document.querySelector("#checkboxdate").addEventListener("click", dateappears);
-        // function dateappears(): void {
-        //     nextelement.innerHTML = dateoftoday.toLocaleDateString() + " " + product + " " + amount + " " + comment;
-        // }
         //gibt die einzelnen inputs aus
         let nextelement = document.createElement("div");
         nextelement.classList.add("inputData");
         nextelement.innerHTML = dateoftoday.toLocaleDateString() + " " + product + " " + amount + " " + comment;
         var getelement = document.querySelector("#alloutputs");
         getelement.appendChild(nextelement);
+        //buy next time erscheint
+        document.querySelector("#checkboxdate").addEventListener("click", buynext);
+        function buynext() {
+            console.log("test");
+        }
         //Neue Checkbox 
         let listcheck = document.createElement("input");
         listcheck.type = "checkbox";

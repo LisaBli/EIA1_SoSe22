@@ -89,17 +89,18 @@ namespace a04_shoppinglist {
 
         let dateoftoday: Date = new Date();
 
-        // document.querySelector("#checkboxdate").addEventListener("click", dateappears);
-        // function dateappears(): void {
-        //     nextelement.innerHTML = dateoftoday.toLocaleDateString() + " " + product + " " + amount + " " + comment;
-        // }
-
         //gibt die einzelnen inputs aus
         let nextelement: HTMLDivElement = document.createElement("div");
         nextelement.classList.add("inputData");
         nextelement.innerHTML = dateoftoday.toLocaleDateString() + " " + product + " " + amount + " " + comment;
         var getelement: HTMLElement = document.querySelector("#alloutputs");
         getelement.appendChild(nextelement);
+
+        //buy next time erscheint
+        document.querySelector("#checkboxdate").addEventListener("click", buynext);
+        function buynext(): void {
+            console.log("test");
+        }
 
         //Neue Checkbox 
         let listcheck: HTMLInputElement = document.createElement("input");
