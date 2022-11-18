@@ -219,12 +219,7 @@ namespace a06_shoppinglist {
 
     function daterefresh(nextelement: HTMLDivElement, counter: number): void {
         console.log("date");
-        // let checker: HTMLInputElement = <HTMLInputElement>document.querySelector(".checkbox1");
-        // var test: string;
-        // if (checker.checked) {
-        //     test = " test";
-        //     nextelement.appendChild(test);
-        //}
+        let dateoftoday: Date = new Date();
     }
 
     //delete funktion

@@ -159,12 +159,7 @@ var a06_shoppinglist;
     }
     function daterefresh(nextelement, counter) {
         console.log("date");
-        // let checker: HTMLInputElement = <HTMLInputElement>document.querySelector(".checkbox1");
-        // var test: string;
-        // if (checker.checked) {
-        //     test = " test";
-        //     nextelement.appendChild(test);
-        //}
+        let dateoftoday = new Date();
     }
     //delete funktion
     async function deletelistelement(nextelement, counter) {
