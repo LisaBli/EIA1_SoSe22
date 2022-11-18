@@ -224,7 +224,7 @@ namespace a06_shoppinglist {
         // if (checker.checked) {
         //     test = " test";
         //     nextelement.appendChild(test);
-        // }
+        //}
     }
 
     //delete funktion
