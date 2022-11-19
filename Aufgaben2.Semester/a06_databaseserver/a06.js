@@ -33,7 +33,7 @@ var a06_shoppinglist;
         query.set("command", "insert");
         query.set("collection", "data");
         query.set("data", JSON.stringify(json));
-        console.log("send");
+        console.log("data sent");
         let response = await fetch("https://webuser.hs-furtwangen.de/~blindenh/Database/index.php?" + query.toString());
         console.log(response);
         alert("sent");
