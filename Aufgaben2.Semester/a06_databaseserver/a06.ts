@@ -134,7 +134,7 @@ namespace a06_shoppinglist {
             });
 
             listcheck.addEventListener("click", function (): void {
-                daterefresh(nextelement, counter);
+                daterefresh(nextelement, product, amount, comment, nextpurchase, counter);
             });
         }
     }
@@ -175,11 +175,53 @@ namespace a06_shoppinglist {
         //listcheck.checked = "checked";
         nextelement.appendChild(listcheck);
 
-        //change date
-        let checker: HTMLInputElement = <HTMLInputElement>document.querySelector(".checkbox1");
-        if (checker.checked) {
-            dateoftoday.toLocaleDateString();
-        }
+        //neuer Trash 
+        let listtrash: HTMLDivElement = document.createElement("div");
+        listtrash.innerHTML = "<i id='trash' class='fa-solid fa-trash-can'></i>";
+        nextelement.appendChild(listtrash);
+
+        //neues edit 
+        let listedit: HTMLDivElement = document.createElement("div");
+        listedit.className = "edit";
+        listedit.innerHTML = "<i id ='edit' class='fa-regular fa-pen-to-square'></i>";
+        nextelement.appendChild(listedit);
+
+        listtrash.addEventListener("click", function (): void {
+            deletelistelement(nextelement, counter);
+        });
+
+        listedit.addEventListener("click", function (): void {
+            editlistelement(nextelement, product, amount, comment, counter);
+        });
+
+        listcheck.addEventListener("click", function (): void {
+            daterefresh(nextelement, product, amount, comment, nextpurchase, counter);
+        });
+
+        //alle inputs leeren
+        let inputproductname: HTMLInputElement = document.getElementById("inputproduct") as HTMLInputElement;
+        inputproductname.value = "";
+        let inputamount: HTMLInputElement = document.getElementById("amount") as HTMLInputElement;
+        inputamount.value = "";
+        let inputcomment: HTMLTextAreaElement = document.getElementById("inputcomment") as HTMLTextAreaElement;
+        inputcomment.value = "";
+
+        setTimeout(function (): void {
+            location.reload();
+        }, 2000);
+    }
+
+    async function daterefresh(nextelement: HTMLDivElement, product: string, amount: number, comment: string, nextpurchase: string, counter: number): Promise<void> {
+        console.log("date");
+        let dateoftodaynew: Date = new Date();
+        nextelement.innerHTML = dateoftodaynew.toLocaleDateString() + " / " + product + " / " + amount + " / " + comment + " / " + nextpurchase;
+
+        //Neue Checkbox 
+        let listcheck: HTMLInputElement = document.createElement("input");
+        listcheck.type = "checkbox";
+        listcheck.name = "Checkbox1";
+        listcheck.className = "checkbox1";
+        nextelement.appendChild(listcheck);
 
         //neuer Trash 
         let listtrash: HTMLDivElement = document.createElement("div");
@@ -201,25 +243,18 @@ namespace a06_shoppinglist {
         });
 
         listcheck.addEventListener("click", function (): void {
-            daterefresh(nextelement, counter);
+            daterefresh(nextelement, product, amount, comment, nextpurchase, counter);
         });
 
-        //alle inputs leeren
-        let inputproductname: HTMLInputElement = document.getElementById("inputproduct") as HTMLInputElement;
-        inputproductname.value = "";
-        let inputamount: HTMLInputElement = document.getElementById("amount") as HTMLInputElement;
-        inputamount.value = "";
-        let inputcomment: HTMLTextAreaElement = document.getElementById("inputcomment") as HTMLTextAreaElement;
-        inputcomment.value = "";
+        let newdate: string = dateoftodaynew.toLocaleDateString();
+        let json: FormDataJSON = {newdate};
+        let query: URLSearchParams = new URLSearchParams();
+        query.set("command", "update");
+        query.set("collection", "data");
+        query.set("data", JSON.stringify(json));
 
-        setTimeout(function (): void {
-            location.reload();
-        }, 2000);
-    }
-
-    function daterefresh(nextelement: HTMLDivElement, counter: number): void {
-        console.log("date");
-        let dateoftoday: Date = new Date();
+        let response: Response = await fetch("https://webuser.hs-furtwangen.de/~blindenh/Database/index.php?" + query.toString());
+        console.log("date refreshed");
     }
 
     //delete funktion

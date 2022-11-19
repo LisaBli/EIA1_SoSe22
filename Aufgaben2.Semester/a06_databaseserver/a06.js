@@ -89,7 +89,7 @@ var a06_shoppinglist;
                 editlistelement(nextelement, product, amount, comment, counter);
             });
             listcheck.addEventListener("click", function () {
-                daterefresh(nextelement, counter);
+                daterefresh(nextelement, product, amount, comment, nextpurchase, counter);
             });
         }
     }
@@ -123,11 +123,6 @@ var a06_shoppinglist;
         listcheck.className = "checkbox1";
         //listcheck.checked = "checked";
         nextelement.appendChild(listcheck);
-        //change date
-        let checker = document.querySelector(".checkbox1");
-        if (checker.checked) {
-            dateoftoday.toLocaleDateString();
-        }
         //neuer Trash 
         let listtrash = document.createElement("div");
         listtrash.innerHTML = "<i id='trash' class='fa-solid fa-trash-can'></i>";
@@ -144,7 +139,7 @@ var a06_shoppinglist;
             editlistelement(nextelement, product, amount, comment, counter);
         });
         listcheck.addEventListener("click", function () {
-            daterefresh(nextelement, counter);
+            daterefresh(nextelement, product, amount, comment, nextpurchase, counter);
         });
         //alle inputs leeren
         let inputproductname = document.getElementById("inputproduct");
@@ -157,9 +152,42 @@ var a06_shoppinglist;
             location.reload();
         }, 2000);
     }
-    function daterefresh(nextelement, counter) {
+    async function daterefresh(nextelement, product, amount, comment, nextpurchase, counter) {
         console.log("date");
-        let dateoftoday = new Date();
+        let dateoftodaynew = new Date();
+        nextelement.innerHTML = dateoftodaynew.toLocaleDateString() + " / " + product + " / " + amount + " / " + comment + " / " + nextpurchase;
+        //Neue Checkbox 
+        let listcheck = document.createElement("input");
+        listcheck.type = "checkbox";
+        listcheck.name = "Checkbox1";
+        listcheck.className = "checkbox1";
+        nextelement.appendChild(listcheck);
+        //neuer Trash 
+        let listtrash = document.createElement("div");
+        listtrash.innerHTML = "<i id='trash' class='fa-solid fa-trash-can'></i>";
+        nextelement.appendChild(listtrash);
+        //neues edit 
+        let listedit = document.createElement("div");
+        listedit.className = "edit";
+        listedit.innerHTML = "<i id ='edit' class='fa-regular fa-pen-to-square'></i>";
+        nextelement.appendChild(listedit);
+        listtrash.addEventListener("click", function () {
+            deletelistelement(nextelement, counter);
+        });
+        listedit.addEventListener("click", function () {
+            editlistelement(nextelement, product, amount, comment, counter);
+        });
+        listcheck.addEventListener("click", function () {
+            daterefresh(nextelement, product, amount, comment, nextpurchase, counter);
+        });
+        let newdate = dateoftodaynew.toLocaleDateString();
+        let json = { newdate };
+        let query = new URLSearchParams();
+        query.set("command", "update");
+        query.set("collection", "data");
+        query.set("data", JSON.stringify(json));
+        let response = await fetch("https://webuser.hs-furtwangen.de/~blindenh/Database/index.php?" + query.toString());
+        console.log("date refreshed");
     }
     //delete funktion
     async function deletelistelement(nextelement, counter) {
