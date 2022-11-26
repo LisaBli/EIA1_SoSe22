@@ -2,3 +2,12 @@ body {
    background-color: black;
 
 }
+
+button {
+    background-color:blue;
+    color: white;
+    border-radius: 10%;
+    position: relative;
+    left: 45%;
+    top: -50px;
+}
