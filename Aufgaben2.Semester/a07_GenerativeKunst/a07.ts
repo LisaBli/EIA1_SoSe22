@@ -21,6 +21,7 @@ namespace a08_generativeArt {
         document.querySelector("#button1").addEventListener("click", button);
     }
 
+    //draws lines in the background
     function lines(crc2: CanvasRenderingContext2D): void {
         for (let index: number = 0; index < 40; index++) {
             let randomx: number = Math.floor(Math.random() * (1450 - 0.5) + 0.5);
@@ -50,6 +51,7 @@ namespace a08_generativeArt {
         }
     }
 
+    //draws circles
     function circle(crc2: CanvasRenderingContext2D): void {
         console.log("test");
 
@@ -80,6 +82,7 @@ namespace a08_generativeArt {
         }
     }
 
+    //drwas random triangles
     function triangle(crc2: CanvasRenderingContext2D): void {
        
         for (let index: number = 0; index < 40; index++) {
@@ -100,6 +103,7 @@ namespace a08_generativeArt {
         }
     }
 
+    //Button creates new art, reloads page
     function button(): void {
         location.reload();
     }

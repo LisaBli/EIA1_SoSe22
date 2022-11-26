@@ -16,6 +16,7 @@ var a08_generativeArt;
         triangle(crc2);
         document.querySelector("#button1").addEventListener("click", button);
     }
+    //draws lines in the background
     function lines(crc2) {
         for (let index = 0; index < 40; index++) {
             let randomx = Math.floor(Math.random() * (1450 - 0.5) + 0.5);
@@ -40,6 +41,7 @@ var a08_generativeArt;
             crc2.shadowBlur = 20;
         }
     }
+    //draws circles
     function circle(crc2) {
         console.log("test");
         for (let index = 0; index < 70; index++) {
@@ -66,6 +68,7 @@ var a08_generativeArt;
             }
         }
     }
+    //drwas random triangles
     function triangle(crc2) {
         for (let index = 0; index < 40; index++) {
             let randomx = Math.floor(Math.random() * (1450 - 0.5) + 0.5);
@@ -83,6 +86,7 @@ var a08_generativeArt;
             crc2.rotate(randomz);
         }
     }
+    //Button creates new art, reloads page
     function button() {
         location.reload();
     }
