@@ -1,5 +1,5 @@
 /*
-Aufgabe: 08
+Aufgabe: 08.2
 Name: Lisa Blindenhöfer
 Matrikel Nr.: 271450
 Datum: 03.12.2022
@@ -35,8 +35,10 @@ namespace a08_2_Vogelhaus {
         drawmountains(mountains, 50, 150, "grey", "lightgrey");
         drawtrees({ x: 200, y: 420 });
         drawsnowman({ x: 90, y: 620 });
-        drawhouse({ x: 800, y: 540 });
-        drawbird();
+        drawhouse({ x: 830, y: 540 });
+        drawbird({ x: 500, y: 610 });
+        drawbird2({ x: 800, y: 466 });
+        flyingbirds();
         drawsnowflakes();
 
     }
@@ -175,8 +177,8 @@ namespace a08_2_Vogelhaus {
         crc2.restore();
 
         for (let index: number = 0; index < 7; index++) {
-            let randomx: number = Math.floor(Math.random() * (700 - 200) + 200);
-            let randomy: number = Math.floor(Math.random() * (600 - 420) + 420);
+            let randomx: number = Math.floor(Math.random() * (750 - 200) + 200);
+            let randomy: number = Math.floor(Math.random() * (500 - 420) + 420);
             let randomscale: number = Math.floor(Math.random() * (3 - 1) + 1);
 
             crc2.save();
@@ -333,8 +335,10 @@ namespace a08_2_Vogelhaus {
         crc2.lineTo(0, -180);
         crc2.lineTo(-120, -120);
         crc2.lineTo(-80, -120);
-        crc2.fillStyle = "brown";
-        crc2.fill();
+        crc2.lineTo(-80, 0);
+        crc2.lineWidth = 6;
+        crc2.strokeStyle = "brown";
+        crc2.stroke();
         crc2.closePath();
         crc2.restore();
 
@@ -357,20 +361,326 @@ namespace a08_2_Vogelhaus {
         crc2.fill();
         crc2.closePath();
         crc2.restore();
+    }
 
-        let rhole: number = 32;
+    function drawbird(_position: Vector): void {
+        console.log("birds");
+
+        let rhole: number = 15;
         crc2.save();
         crc2.beginPath();
         crc2.translate(_position.x, _position.y);
-        crc2.fillStyle = "wihite";
-        crc2.arc(0, -60, rhole, 0, 2 * Math.PI);
+        crc2.fillStyle = "brown";
+        crc2.arc(0, 0, rhole, 0, 2 * Math.PI);
         crc2.fill();
         crc2.closePath();
         crc2.restore();
+
+        crc2.save();
+        crc2.beginPath();
+        crc2.translate(_position.x, _position.y);
+        crc2.moveTo(15, -5);
+        crc2.lineTo(15, 5);
+        crc2.lineTo(30, 0);
+        crc2.fillStyle = "orange";
+        crc2.fill();
+        crc2.closePath();
+        crc2.restore();
+
+        let rAuge: number = 2;
+        crc2.save();
+        crc2.beginPath();
+        crc2.translate(_position.x, _position.y);
+        crc2.fillStyle = "black";
+        crc2.arc(4, -5, rAuge, 0, 2 * Math.PI);
+        crc2.fill();
+        crc2.closePath();
+        crc2.restore();
+
+        crc2.save();
+        crc2.beginPath();
+        crc2.translate(_position.x, _position.y);
+        crc2.moveTo(2, 10);
+        crc2.bezierCurveTo(10, 30, 2, 45, -42, 55);
+        crc2.lineTo(-42, 70);
+        crc2.lineTo(-28, 70);
+        crc2.lineTo(-28, 71);
+        crc2.lineTo(-50, 71);
+        crc2.lineTo(-40, 70);
+        crc2.lineTo(-40, 55);
+
+        crc2.lineTo(-44, 55);
+        crc2.lineTo(-44, 67);
+        crc2.lineTo(-30, 67);
+        crc2.lineTo(-30, 67);
+        crc2.lineTo(-30, 68);
+        crc2.lineTo(-56, 67);
+        crc2.lineTo(-46, 67);
+        crc2.lineTo(-46, 55);
+
+        crc2.lineTo(-90, 60);
+        crc2.lineTo(-93, 55);
+        crc2.lineTo(-56, 40);
+        crc2.bezierCurveTo(-40, 30, -30, 10, -2, 10);
+        crc2.fillStyle = "brown";
+        crc2.fill();
+        crc2.closePath();
+        crc2.restore();
+
+        for (let index: number = 0; index < 2; index++) {
+            let randomx: number = Math.floor(Math.random() * (700 - 220) + 220);
+            let randomy: number = Math.floor(Math.random() * (630 - 490) + 490);
+            //let randomscale: number = Math.floor(Math.random() * (2 - 0.5) + 0.5);
+            let randomcolor: number = Math.floor(Math.random() * (4 - 1) + 1);
+            Math.round(randomcolor);
+
+            if (randomcolor == 1) {
+                crc2.fillStyle = "#b09a85";
+            }
+            if (randomcolor == 2) {
+                crc2.fillStyle = "brown";
+            }
+            if (randomcolor == 3) {
+                crc2.fillStyle = "#2c241c";
+            }
+
+            let rhole: number = 15;
+            crc2.save();
+            crc2.beginPath();
+            crc2.translate(randomx, randomy);
+            crc2.arc(0, 0, rhole, 0, 2 * Math.PI);
+            crc2.fill();
+            crc2.closePath();
+            crc2.restore();
+
+            crc2.save();
+            crc2.beginPath();
+            crc2.translate(randomx, randomy);
+            crc2.moveTo(15, -5);
+            crc2.lineTo(15, 5);
+            crc2.lineTo(30, 0);
+            crc2.fillStyle = "orange";
+            crc2.fill();
+            crc2.closePath();
+            crc2.restore();
+
+            let rAuge: number = 2;
+            crc2.save();
+            crc2.beginPath();
+            crc2.translate(randomx, randomy);
+            crc2.fillStyle = "black";
+            crc2.arc(4, -5, rAuge, 0, 2 * Math.PI);
+            crc2.fill();
+            crc2.closePath();
+            crc2.restore();
+
+            crc2.save();
+            crc2.beginPath();
+            crc2.translate(randomx, randomy);
+            crc2.moveTo(2, 10);
+            crc2.bezierCurveTo(10, 30, 2, 45, -42, 55);
+            crc2.lineTo(-42, 70);
+            crc2.lineTo(-28, 70);
+            crc2.lineTo(-28, 71);
+            crc2.lineTo(-50, 71);
+            crc2.lineTo(-40, 70);
+            crc2.lineTo(-40, 55);
+
+            crc2.lineTo(-44, 55);
+            crc2.lineTo(-44, 67);
+            crc2.lineTo(-30, 67);
+            crc2.lineTo(-30, 67);
+            crc2.lineTo(-30, 68);
+            crc2.lineTo(-56, 67);
+            crc2.lineTo(-46, 67);
+            crc2.lineTo(-46, 55);
+
+            crc2.lineTo(-90, 60);
+            crc2.lineTo(-93, 55);
+            crc2.lineTo(-56, 40);
+            crc2.bezierCurveTo(-40, 30, -30, 10, -2, 10);
+            crc2.fill();
+            crc2.closePath();
+            crc2.restore();
+        }
     }
 
-    function drawbird(): void {
-        console.log("birds");
+    function drawbird2(_position: Vector): void {
+        console.log("bird2");
+
+        let rhole: number = 15;
+        crc2.save();
+        crc2.beginPath();
+        crc2.translate(_position.x, _position.y);
+        crc2.fillStyle = "#79553C";
+        crc2.arc(0, 0, rhole, 0, 2 * Math.PI);
+        crc2.fill();
+        crc2.closePath();
+        crc2.restore();
+
+        crc2.save();
+        crc2.beginPath();
+        crc2.translate(_position.x, _position.y);
+        crc2.moveTo(-15, -5);
+        crc2.lineTo(-15, 5);
+        crc2.lineTo(-30, 0);
+        crc2.fillStyle = "orange";
+        crc2.fill();
+        crc2.closePath();
+        crc2.restore();
+
+        let rAuge: number = 2;
+        crc2.save();
+        crc2.beginPath();
+        crc2.translate(_position.x, _position.y);
+        crc2.fillStyle = "black";
+        crc2.arc(-4, -5, rAuge, 0, 2 * Math.PI);
+        crc2.fill();
+        crc2.closePath();
+        crc2.restore();
+
+        crc2.save();
+        crc2.beginPath();
+        crc2.translate(_position.x, _position.y);
+        crc2.moveTo(2, 10);
+        crc2.bezierCurveTo(-10, 30, -2, 45, 42, 55);
+        crc2.lineTo(42, 70);
+        crc2.lineTo(28, 70);
+        crc2.lineTo(28, 71);
+        crc2.lineTo(50, 71);
+        crc2.lineTo(40, 70);
+        crc2.lineTo(40, 55);
+
+        crc2.lineTo(44, 55);
+        crc2.lineTo(44, 67);
+        crc2.lineTo(30, 67);
+        crc2.lineTo(30, 67);
+        crc2.lineTo(30, 68);
+        crc2.lineTo(56, 67);
+        crc2.lineTo(46, 67);
+        crc2.lineTo(46, 55);
+
+        crc2.lineTo(90, 60);
+        crc2.lineTo(93, 55);
+        crc2.lineTo(56, 40);
+        crc2.bezierCurveTo(40, 30, 30, 10, 2, 10);
+        crc2.fillStyle = "#79553C";
+        crc2.fill();
+        crc2.closePath();
+        crc2.restore();
+
+        for (let index: number = 0; index < 3; index++) {
+            let randomx: number = Math.floor(Math.random() * (700 - 230) + 230);
+            let randomy: number = Math.floor(Math.random() * (670 - 490) + 490);
+            let randomcolor: number = Math.floor(Math.random() * (4 - 1) + 1);
+            Math.round(randomcolor);
+        
+            if (randomcolor == 1) {
+                crc2.fillStyle = "#79553C";
+            }
+            if (randomcolor == 2) {
+                crc2.fillStyle = "#5B3A29";
+            }
+            if (randomcolor == 3) {
+                crc2.fillStyle = "#2c241c";
+            }
+
+            let rhole: number = 15;
+            crc2.save();
+            crc2.beginPath();
+            crc2.translate(randomx, randomy);
+            crc2.scale(0.5, 0.5);
+            crc2.arc(0, 0, rhole, 0, 2 * Math.PI);
+            crc2.fill();
+            crc2.closePath();
+            crc2.restore();
+
+            crc2.save();
+            crc2.beginPath();
+            crc2.translate(randomx, randomy);
+            crc2.scale(0.5, 0.5);
+            crc2.moveTo(-15, -5);
+            crc2.lineTo(-15, 5);
+            crc2.lineTo(-30, 0);
+            crc2.fillStyle = "orange";
+            crc2.fill();
+            crc2.closePath();
+            crc2.restore();
+
+            let rAuge: number = 2;
+            crc2.save();
+            crc2.beginPath();
+            crc2.translate(randomx, randomy);
+            crc2.scale(0.5, 0.5);
+            crc2.fillStyle = "black";
+            crc2.arc(-4, -5, rAuge, 0, 2 * Math.PI);
+            crc2.fill();
+            crc2.closePath();
+            crc2.restore();
+
+            crc2.save();
+            crc2.beginPath();
+            crc2.translate(randomx, randomy);
+            crc2.scale(0.5, 0.5);
+            crc2.moveTo(2, 10);
+            crc2.bezierCurveTo(-10, 30, -2, 45, 42, 55);
+            crc2.lineTo(42, 70);
+            crc2.lineTo(28, 70);
+            crc2.lineTo(28, 71);
+            crc2.lineTo(50, 71);
+            crc2.lineTo(40, 70);
+            crc2.lineTo(40, 55);
+
+            crc2.lineTo(44, 55);
+            crc2.lineTo(44, 67);
+            crc2.lineTo(30, 67);
+            crc2.lineTo(30, 67);
+            crc2.lineTo(30, 68);
+            crc2.lineTo(56, 67);
+            crc2.lineTo(46, 67);
+            crc2.lineTo(46, 55);
+
+            crc2.lineTo(90, 60);
+            crc2.lineTo(93, 55);
+            crc2.lineTo(56, 40);
+            crc2.bezierCurveTo(40, 30, 30, 10, 2, 10);
+            crc2.fill();
+            crc2.closePath();
+            crc2.restore();
+        }
+    }
+
+    function flyingbirds(): void {
+        console.log("flyingbird");
+
+        for (let index: number = 0; index < 17; index++) {
+            let randomx: number = Math.floor(Math.random() * (900 - 40) + 40);
+            let randomy: number = Math.floor(Math.random() * (200 - 20) + 20);
+            let randomscale: number = Math.floor(Math.random() * (3 - 0.5) + 0.5);
+
+            let rAuge: number = 1;
+            crc2.save();
+            crc2.beginPath();
+            crc2.translate(randomx, randomy);
+            crc2.scale(randomscale, randomscale);
+            crc2.fillStyle = "black";
+            crc2.arc(0, 0, rAuge, 0, 2 * Math.PI);
+            crc2.fill();
+            crc2.closePath();
+            crc2.restore();
+
+            crc2.save();
+            crc2.beginPath();
+            crc2.translate(randomx, randomy);
+            crc2.scale(randomscale, randomscale);
+            crc2.moveTo(1, 0);
+            crc2.bezierCurveTo(8, -5, 15, -10, 20, -2);
+            crc2.moveTo(-1, 0);
+            crc2.bezierCurveTo(-8, -5, -15, -10, -20, -2);
+            crc2.stroke();
+            crc2.closePath();
+            crc2.restore();
+        }
     }
 
     function drawsnowflakes(): void {
@@ -400,5 +710,4 @@ namespace a08_2_Vogelhaus {
             crc2.restore();
         }
     }
-
 }
