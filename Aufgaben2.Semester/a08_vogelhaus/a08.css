@@ -1,12 +1,5 @@
-@media screen and (min-width: 769px) {
-    /*** CSS für Bildschrimbreiten bis zu 769 Pixel ***/
+@media only screen and (max-width: 1050px) {
+    canvas {
+        width: 100%;
     }
-    @media screen and (min-width: 770px) and (max-width: 1079px) {
-    /*** CSS für Bildschrimbreiten zwischen 770 und 1079 Pixel ***/
-    }
-    @media screen and (min-width: 1080px) and (max-width: 1479px) {
-    /*** CSS für Bildschrimbreiten zwischen 1080 und 1479 Pixel ***/
-    }
-    @media screen and (min-width: 1480px) {
-    /*** CSS für Bildschrimbreiten ab 1480 Pixel ***/
     }

@@ -430,7 +430,6 @@ namespace a08_2_Vogelhaus {
         for (let index: number = 0; index < 2; index++) {
             let randomx: number = Math.floor(Math.random() * (700 - 220) + 220);
             let randomy: number = Math.floor(Math.random() * (630 - 490) + 490);
-            //let randomscale: number = Math.floor(Math.random() * (2 - 0.5) + 0.5);
             let randomcolor: number = Math.floor(Math.random() * (4 - 1) + 1);
             Math.round(randomcolor);
 
