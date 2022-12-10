@@ -10,3 +10,11 @@ body {
     left: 500px;
     text-align: center;  
 }
+
+#day {
+    background-color: rgb(187, 211, 238);
+    width: 350px;
+    position: relative;
+    left: 500px;
+    text-align: center; 
+}
