@@ -6,6 +6,8 @@ namespace a09_2_Vogelhaus {
         velocity: Vector;
         size: number;
 
+        //halllooooooo
+
         constructor(_size: number) {
             console.log("constructor Snowflakes");
 

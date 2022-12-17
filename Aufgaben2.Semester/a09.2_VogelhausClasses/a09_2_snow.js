@@ -4,6 +4,7 @@ var a09_2_Vogelhaus;
         position;
         velocity;
         size;
+        //halllooooooo
         constructor(_size) {
             console.log("constructor Snowflakes");
             this.position = new a09_2_Vogelhaus.Vector(0, 0);
