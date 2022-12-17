@@ -55,12 +55,5 @@ namespace a09_2_Vogelhaus {
             crc2.restore();
 
         }
-
-        // random(): void {
-
-        //     let randomx: number = Math.floor(Math.random() * (1000 - 1) + 1);
-        //     let randomy: number = Math.floor(Math.random() * (700 - 1) + 1);
-
-        // }
     }
 }
