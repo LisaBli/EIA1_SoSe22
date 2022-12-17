@@ -42,13 +42,7 @@ namespace a09_2_Vogelhaus {
             let canvas: HTMLCanvasElement = document.querySelector("canvas");
             let crc2: CanvasRenderingContext2D = canvas.getContext("2d");
 
-           // let r1: number = 1;
             let r2: number = 2;
-
-            // let gradient: CanvasGradient = crc2.createRadialGradient(0, 0, r1, 0, 0, r2);
-
-            // gradient.addColorStop(0, "HSLA(0, 0%, 100%, 1)");
-            // gradient.addColorStop(1, "HSLA(240, 50%, 90%, 0)");
 
             crc2.save();
             crc2.translate(this.position.x, this.position.y);
@@ -62,11 +56,11 @@ namespace a09_2_Vogelhaus {
 
         }
 
-        random(): void {
+        // random(): void {
 
-            let randomx: number = Math.floor(Math.random() * (1000 - 1) + 1);
-            let randomy: number = Math.floor(Math.random() * (700 - 1) + 1);
+        //     let randomx: number = Math.floor(Math.random() * (1000 - 1) + 1);
+        //     let randomy: number = Math.floor(Math.random() * (700 - 1) + 1);
 
-        }
+        // }
     }
 }

@@ -31,11 +31,7 @@ var a09_2_Vogelhaus;
             console.log("draw Snowflake");
             let canvas = document.querySelector("canvas");
             let crc2 = canvas.getContext("2d");
-            // let r1: number = 1;
             let r2 = 2;
-            // let gradient: CanvasGradient = crc2.createRadialGradient(0, 0, r1, 0, 0, r2);
-            // gradient.addColorStop(0, "HSLA(0, 0%, 100%, 1)");
-            // gradient.addColorStop(1, "HSLA(240, 50%, 90%, 0)");
             crc2.save();
             crc2.translate(this.position.x, this.position.y);
             crc2.scale(this.size, this.size);
@@ -45,10 +41,6 @@ var a09_2_Vogelhaus;
             crc2.closePath();
             crc2.fill();
             crc2.restore();
-        }
-        random() {
-            let randomx = Math.floor(Math.random() * (1000 - 1) + 1);
-            let randomy = Math.floor(Math.random() * (700 - 1) + 1);
         }
     }
     a09_2_Vogelhaus.Snowflake = Snowflake;

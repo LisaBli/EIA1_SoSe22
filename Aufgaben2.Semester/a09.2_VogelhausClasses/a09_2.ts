@@ -22,7 +22,6 @@ namespace a09_2_Vogelhaus {
     let background: ImageData;
     let snowflakes: Snowflake[] = [];
     let birds: Bird[] = [];
-    let pickings: Picking[] = [];
 
     export function handleload(): void {
         console.log("handleload");
@@ -33,12 +32,12 @@ namespace a09_2_Vogelhaus {
         crc2 = <CanvasRenderingContext2D>canvas.getContext("2d");
 
         drawBackground();
-        createSnowflakes();
+        create();
         setInterval(update, 20);
 
     }
 
-    function createSnowflakes(): void {
+    function create(): void {
         console.log("create snowflakes");
 
         for (let index: number = 0; index < 200; index++) {
@@ -53,13 +52,6 @@ namespace a09_2_Vogelhaus {
             let bird: Bird = new Bird(randomscale2);
             birds.push(bird);
         }
-
-        // for (let indexpicking: number = 0; indexpicking < 17; indexpicking++) {
-        //     let randomscale2: number = Math.floor(Math.random() * (3 - 0.5) + 0.5);
-        //     let picking: Picking = new Picking(randomscale2);
-        //     birds.push(picking);
-        // }
-
     }
 
     function update(): void {
@@ -75,11 +67,6 @@ namespace a09_2_Vogelhaus {
             bird.draw();
             bird.move(1 / 200);
         }
-
-        // for (let picking of pickings) {
-        //     picking.draw();
-        //    // picking.move(1 / 200);
-        // }
     }
 
 

@@ -15,17 +15,12 @@ namespace a09_2_Vogelhaus {
         draw(): void {
             console.log("draw bird");
             let canvas: HTMLCanvasElement = document.querySelector("canvas");
-            let crc2: CanvasRenderingContext2D = canvas.getContext("2d");
-
-            // let randomx: number = Math.floor(Math.random() * (900 - 40) + 40);
-            // let randomy: number = Math.floor(Math.random() * (200 - 20) + 20);
-            //let randomscale: number = Math.floor(Math.random() * (3 - 0.5) + 0.5);
+            let crc2: CanvasRenderingContext2D = canvas.getContext("2d")
 
             let rAuge: number = 1;
             crc2.save();
             crc2.beginPath();
             crc2.translate(this.position.x, this.position.y);
-            //crc2.scale(randomscale, randomscale);
             crc2.fillStyle = "black";
             crc2.arc(0, 0, rAuge, 0, 2 * Math.PI);
             crc2.fill();
@@ -35,7 +30,6 @@ namespace a09_2_Vogelhaus {
             crc2.save();
             crc2.beginPath();
             crc2.translate(this.position.x, this.position.y);
-            //crc2.scale(randomscale, randomscale);
             crc2.moveTo(1, 0);
             crc2.bezierCurveTo(8, -5, 15, -10, 20, -2);
             crc2.moveTo(-1, 0);

@@ -13,7 +13,6 @@ var a09_2_Vogelhaus;
     let background;
     let snowflakes = [];
     let birds = [];
-    let pickings = [];
     function handleload() {
         console.log("handleload");
         let canvas = document.querySelector("canvas");
@@ -21,11 +20,11 @@ var a09_2_Vogelhaus;
             return;
         crc2 = canvas.getContext("2d");
         drawBackground();
-        createSnowflakes();
+        create();
         setInterval(update, 20);
     }
     a09_2_Vogelhaus.handleload = handleload;
-    function createSnowflakes() {
+    function create() {
         console.log("create snowflakes");
         for (let index = 0; index < 200; index++) {
             let randomscale = Math.floor(Math.random() * (3 - 1) + 1);
@@ -37,11 +36,6 @@ var a09_2_Vogelhaus;
             let bird = new a09_2_Vogelhaus.Bird(randomscale2);
             birds.push(bird);
         }
-        // for (let indexpicking: number = 0; indexpicking < 17; indexpicking++) {
-        //     let randomscale2: number = Math.floor(Math.random() * (3 - 0.5) + 0.5);
-        //     let picking: Picking = new Picking(randomscale2);
-        //     birds.push(picking);
-        // }
     }
     function update() {
         console.log("Update");
@@ -54,10 +48,6 @@ var a09_2_Vogelhaus;
             bird.draw();
             bird.move(1 / 200);
         }
-        // for (let picking of pickings) {
-        //     picking.draw();
-        //    // picking.move(1 / 200);
-        // }
     }
     function drawBackground() {
         console.log("Background");
