@@ -1,0 +1,97 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-align: center;
+    width: 100%;
+    background-image: url(./spiegel.jpg);
+}
+
+#container {
+    border: none;
+    justify-content: center;
+    background-color: black;
+    width: 1050px;
+    height: max-content;
+    position: relative;
+    left: 200px;
+}
+
+header {
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    opacity: 70%;
+}
+
+nav {
+    background-color: black;
+    opacity: 70%;
+    color: #fff;
+    text-align: center;
+    padding: 10px;   
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+section {
+    padding: 20px;
+}
+
+footer{
+    background-color: black;
+    opacity: 70%;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+}
+
+.einfuehrung {
+    width: 600px;
+    text-align: center;
+    position: relative;
+    left: 215px;
+}
+
+#bild1 {
+    width: 300px;
+    height: 220px;
+    opacity: none;
+}
+
+
+
+#bild2 {
+    width: 800px;
+    position: relative;
+    left: 30px;
+}
+
+video {
+    padding: 20px;
+    opacity: 120%;
+}
+
+#hfu {
+    width: 25%;
+}
+
+#opacity {
+opacity: 100%;
+color: black;
+}
+
